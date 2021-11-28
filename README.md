@@ -1,6 +1,6 @@
 # AttendanceManagementSystem
 
-## Note: Run the discovery server at first, and then any of these services can be run in any arbitrary order.
+## Note: Run the discovery server first, and then any of these services can be run in any arbitrary order.
 
 ###### Terminal-1
 ```
@@ -37,7 +37,7 @@ cd gateway
 
 **For Attendance**
 ```
-http://ocalhost:3001/attendance/
+http://localhost:3001/attendance/
 ```
 **For Courses**
 ```
