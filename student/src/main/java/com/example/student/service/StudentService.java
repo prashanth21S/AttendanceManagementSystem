@@ -3,19 +3,24 @@ package com.example.student.service;
 import org.springframework.stereotype.Service;
 
 import com.example.student.model.Student;
+
 import com.example.student.repository.StudentRepository;
 
 import java.util.List;
 
+
 @Service
 public class StudentService {
+
 
     private final StudentRepository studentRepository;
 
     public StudentService(StudentRepository studentRepository)
     {
         this.studentRepository=studentRepository;
+
     }
+
     public List<Student> getAllStudents(){
         return studentRepository.findAll();
     }
@@ -38,6 +43,7 @@ public class StudentService {
         stud.setName(student.getName());
         stud.setPhone(student.getPhone());
         stud.setUsn(student.getUsn());
+        studentRepository.save(stud);
         return stud;
     }
 
@@ -45,4 +51,5 @@ public class StudentService {
     {
         studentRepository.deleteAll();
     }
+
 }

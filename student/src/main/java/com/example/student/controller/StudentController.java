@@ -49,6 +49,4 @@ public class StudentController {
         return "All Students data deleted";
     }
     
-
-    
 }

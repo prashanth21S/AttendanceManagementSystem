@@ -1,12 +1,14 @@
-package com.example.student.model;
+package com.example.attendance.model;
 import java.util.ArrayList;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import java.util.List;
@@ -23,6 +25,9 @@ public class Student {
     private String phone;
     @Column
     private String email;
+
+    @OneToOne(cascade=CascadeType.ALL,mappedBy = "student")
+    private Attendance attendance;
 
 
     public Student()
@@ -69,5 +74,14 @@ public class Student {
     {
         this.email=email;
     }
+    public Attendance getAttendance()
+    {
+        return attendance;
+    }
+    public void setAttendance(Attendance attendance){
+        this.attendance=attendance;
+    }
+
+
 
 }
