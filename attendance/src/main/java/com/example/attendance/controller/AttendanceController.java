@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@RequestMapping("/attendance")
 @RestController
 public class AttendanceController {
     private final AttendanceService attendanceService;
